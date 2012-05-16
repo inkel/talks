@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>¿Qué es SPDY?</title>
+
+    <meta charset='utf-8'>
+    <script src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+  </head>
+
+  <style>
+    .slides.template-default > article:not(.nobackground):not(.biglogo) { background: #fff!important; }
+  </style>
+
+  <body style="display: none">
+
+    <section class="slides layout-regular template-default">
+
+      <article>
+        <h1>¿Qué es SPDY?</h1>
+        <p>Leandro López</p>
+      </article>
+
+      <article>
+        <h3>HTTP está viejo</h3>
+        <ul>
+          <li>No se actualiza hace más de una década.</li>
+          <li>Es sincrónico.</li>
+          <li>No mantiene conexiones.</li>
+          <li>Demasiado trabajo para reducir la cantidad de <i lang="en">requests</i>.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>SPDY</h3>
+        <p><a href="http://www.modspdy.com/">www.modspdy.com</a></p>
+        <ul>
+          <li>Inventado y utilizado por Google
+          <li>Usar cualquier servicio de Google con Chrome significa usar SPDY
+          <li>Lo convierte en uno de los protocolos más probados de la historia
+          <li>Conexión permanente
+          <li>Seguro por definición
+          <li>Server Push
+          <li>Fácil de instalar en Apache
+        </ul>
+      </article>
+
+      <article>
+        <h3>Seguro por definición</h3>
+        <ul>
+          <li>SSL + NPN = HTTPS o SPDY
+          <li>Ventaja adicional: prevenir <i lang="en">session hijacking</i>
+          <li>Penalidad de velocidad solamente en la primer y única conexión
+        </ul>
+      </article>
+
+      <article>
+        <h3>Veloz</h3>
+        <ul>
+          <li>Una sola conexión
+          <li>Asincrónica
+          <li>En ambas direcciones
+          <li>Compresión de contenidos y cabeceras con un diccionario estático
+          <li>chrome://net-internals/#spdy
+        </ul>
+      </article>
+
+      <article>
+        <h3>Server Push</h3>
+        <ul>
+          <li>Al enviar una hoja de estilos, hacer <i lang="en">push</i> de todas las imágenes que haga referencia.
+          <li>Enviar desde el servidor contenido directamente a la <i lang="en">cache</i> del navegador antes de que este la solicite.
+        </ul>
+      </article>
+
+      <article>
+        <h3>¿Y Ruby?</h3>
+        <p>El soporte de SPDY en Ruby apesta o brilla por su ausencia.
+        <dl>
+          <dt><a href="https://github.com/igrigorik/spdy">igrigorik/spdy</a></dt>
+          <dd>SPDY protocol parser and handler</dd>
+          <dt><a href="https://github.com/jonasschneider/momentum">jonasschneider/momentum</a></dt>
+          <dd>A Rack handler for SPDY clients</dd>
+          <dt><a href="https://github.com/inkel/spdy-examples">inkel/spdy-examples</a></dt>
+          <dd>Ejemplos de uso para la gema SPDY</dd>
+          <dt><a href="https://github.com/inkel/andale">inkel/andale</a></dt>
+          <dd>Algo que quedó en la nada</dd>
+        </dl>
+      </article>
+
+      <article class="nobackground">
+        <h3>SPDY</h3>
+        <iframe src="spdy_server.rb.html"></iframe>
+      </article>
+
+      <article>
+        <h3>Más información</h3>
+        <ul>
+          <li><a href="http://spdyboook.com/">SPDY Book</a>
+          <li><a href="http://www.modspdy.com/">mod_spdy</a>
+          <li><a href="http://tools.ietf.org/html/draft-mbelshe-httpbis-spdy-00">SPDY Protocol</a>
+        </ul>
+      </article>
+
+    </section>
+
+  </body>
+</html>
