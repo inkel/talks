@@ -4,4 +4,24 @@ html, body {
     color: #000;
 }
 
+body {
+    width: 50em;
+    margin: 2em auto;
+}
+
+a {
+    color: #00e;
+    text-decoration: none;
+}
+
 a img { border: none; }
+
+dl {
+    margin: 2em 1em;
+}
+
+dt {
+    margin-top: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
